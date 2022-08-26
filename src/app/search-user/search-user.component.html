@@ -1,0 +1,13 @@
+<form #searchUser="ngForm">
+    <h2>Search User</h2>
+    <div class="col">
+        <label for="names" width="150">
+            Name:
+        </label>
+        <input [(ngModel)]="names" minlength="20" id="names" name="names" type="text" ngModel />
+    </div>
+
+    <button type="submit" (click)="onSearch()">Search
+    </button>
+    <div class="col" *ngIf="mobileNumber">Mobile Number: {{mobileNumber}}</div>
+</form>

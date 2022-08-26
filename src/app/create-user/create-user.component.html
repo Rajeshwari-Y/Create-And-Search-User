@@ -1,0 +1,20 @@
+<form #createUser="ngForm">
+    <h2>Create User</h2>
+    <div class="col">
+        <label for="name" width="150">
+            Name:
+        </label>
+    </div>
+    <div class="col">
+        <input [(ngModel)]="name" minlength="20" id="name" name="name" type="text" ngModel />
+    </div>
+    <div class="col">
+        <label for="mobileNumber" width="150">
+            Mobile Number:
+        </label>
+    </div>
+    <div class="col">
+        <input [(ngModel)]="mobileNumber" id="mobileNumber" maxlength="10" name="mobileNumber" type="tel" ngModel />
+    </div>
+    <button type="submit" (click)="onSubmit()">Save</button>
+</form>
